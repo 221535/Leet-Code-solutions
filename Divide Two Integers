@@ -1,0 +1,23 @@
+public class Solution {
+    public int Divide(int dividend, int divisor) {
+        long res=0;
+        if(divisor==0)
+            return 0;
+        if(divisor==1)
+            return dividend;
+       
+        if(divisor==dividend)
+            return 1;
+       long divdnt=((Int64)dividend);
+        long divisr=((Int64)divisor);
+        
+        for(int i=0;divdnt>=0;i++)
+        {
+            divdnt=divdnt-divisr;
+            res=i;
+        }
+        if(dividend<0 && divisor>0 || dividend>0 && divisor<0)
+            res=-res;
+        return (int)res;
+    }
+}
