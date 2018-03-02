@@ -1,0 +1,20 @@
+public class Solution {
+    public int StrStr(string haystack, string needle) {
+    int hayLength=haystack.Length;
+        int needLength=needle.Length;
+        if(hayLength==0&&needLength==0)
+            return 0;
+        if(hayLength==0)
+            return -1;
+        if(needLength==0)
+             return 0;
+        
+        
+        for(int i=0;i<=hayLength-needLength;i++)
+        {
+            if(haystack.Substring(i,needLength)==needle)
+                return i;
+        }
+       return -1; 
+    }
+}
